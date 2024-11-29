@@ -7,7 +7,7 @@ app.use(express.json());
 app.post("/ia", async (req, res) => {
   const { text } = req.body;
   const response = await axios.post("http://localhost:11434/api/generate", {
-    model: "llama2",
+    model: "llama3",
     prompt: text,
     stream: false,
   });
